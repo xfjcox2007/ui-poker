@@ -12,9 +12,9 @@ teaching_file.close()
 def home():
     return render_template('Home.html')
 
-@app.route('/learn/1')
-def teaching_blinds():
-    return render_template("learn_blinds.html", content=content["1"])
+@app.route('/learn/<page>')
+def teaching_blinds(page):
+    return render_template("learn.html", content=content[page], total=len(content))
 
 if __name__ == '__main__':
     app.run(debug=True)
