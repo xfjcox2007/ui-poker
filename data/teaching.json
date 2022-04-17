@@ -1,27 +1,28 @@
-[{
-	"teaching": 1,
-	"topic": "Blinds / Pre Flop",
-	"content": 
-		[
-			{
-				"text": "The game starts with blind bets and Initial 2 cards to each player",
-				"highlight": ["blind bets", "2 cards"]
-			},
-			{
-				"text": "Person next to dealer ( Clockwise ) starts first with small blind bet",
-				"highlight": ["small blind bet"]
-			}
-			{
-				"text": "The next person bets posts a Big Blind, normally double of small blind",
-				"highlight": ["Big Blind", "double", "small blind"]
-			}
-			{
-				"text": "Total sum becomes the bets",
-				"highlight": ["sum becomes the bets"]
-			}
-		],
-	"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Texas_Hold%27em_Poker_Table_with_Blinds.svg/1200px-Texas_Hold%27em_Poker_Table_with_Blinds.svg.png",
-	"audio": "",
-	"hasNext": 1,
-	"process": 0.1
-}]
+{
+	"1": {
+		"topic": "Blinds / Pre Flop",
+		"content": 
+			[
+				{
+					"text": "The game starts with blind bets and Initial 2 cards to each player",
+					"highlight": ["blind bets", "2 cards"]
+				},
+				{
+					"text": "Person next to dealer (Clockwise) starts first with small blind bet",
+					"highlight": ["small blind bet"]
+				},
+				{
+					"text": "The next person bets posts a Big Blind, normally double of small blind",
+					"highlight": ["Big Blind", "double", "small blind"]
+				},
+				{
+					"text": "Total sum becomes the bets",
+					"highlight": ["sum becomes the bets"]
+				}
+			],
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Texas_Hold%27em_Poker_Table_with_Blinds.svg/1200px-Texas_Hold%27em_Poker_Table_with_Blinds.svg.png",
+		"audio": "",
+		"hasNext": 1,
+		"process": 0.1
+	}
+}
