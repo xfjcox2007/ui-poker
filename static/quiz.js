@@ -1,3 +1,25 @@
+function updateQuizLogs(selectedOption) {
+    console.log("here")
+    let question = window.location.href.split("/").pop()
+    $.ajax({
+        type: "POST",
+        url: "/updateQuiz",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify({selection: selectedOption , page: question}),
+        success: function (result) {
+            console.log("success::", result)
+        },
+        error: function (request, status, error) {
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
+
+
 $(document).ready(function () {
     if (question.type === 'mcq') {
         let selectedOption = 0;
@@ -7,7 +29,7 @@ $(document).ready(function () {
             selectedOption = $(this).index();
             deselectAll();
             console.log(selectedOption);
-            logs["answer"] = selectedOption
+            updateQuizLogs(selectedOption)
             $(`.mcq .choice:nth-child(${selectedOption + 1})`).attr('selected', 'true');
         });
 

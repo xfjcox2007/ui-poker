@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import os
 import json
 import datetime
@@ -27,26 +27,36 @@ user_log = [user]
 @app.route('/', )
 def home():
     user_log[0]["id"] = uuid.uuid4().int
-    print(user_log[0])
     return render_template('Home.html')
 
 
 @app.route('/learn/<page>')
 def teaching_blinds(page):
-    user_log[0]["learn"] = {page: datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")}
+    user_log[0]["learningProgress"].append({page: datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")})
     return render_template("learn.html", content=content[page], total=len(content))
 
 
 @app.route('/quiz/<page>')
 def quiz_page(page):
-    print(user_log[0])
-    user_log[0]["quiz"].append({page: datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")})
+    user_log[0]["quiz"][page] = {"startTime": datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")}
     return render_template("quiz.html", question=questions[page], total=len(questions), index=int(page),
                            logs=user_log[0]["quiz"])
 
 
+@app.route('/updateQuiz', methods=['post'])
+def update_quiz():
+    selection = request.get_json()["selection"]
+    page = request.get_json()["page"]
+    timeStamp = user_log[0]["quiz"][page]
+    user_log[0]["quiz"][page] = {"startTime": user_log[0]["quiz"][page]["startTime"],
+                                 "answer": selection,
+                                 }
+    return jsonify(user_log)
+
+
 @app.route('/results')
 def results():
+    print(user_log)
     return render_template("results.html")
 
 
