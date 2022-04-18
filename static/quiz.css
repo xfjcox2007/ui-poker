@@ -1,0 +1,46 @@
+
+.arrange-option {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #eee;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+}
+
+.arrange-option:hover {
+  cursor: grab;
+}
+
+.choice {
+  padding: 0.35rem 0.5rem;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+}
+
+.choice:hover {
+  cursor: pointer;
+}
+
+.choice[selected] {
+  border: 1px solid rgb(119, 171, 244);
+}
+
+.bubble {
+  width: 16px;
+  height: 16px;
+  background-color: #eee;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.choice[selected] .bubble {
+  background-color: rgb(119, 171, 244);
+}
+
+.choice p {
+  padding: 0rem;
+  margin: 0rem;
+}

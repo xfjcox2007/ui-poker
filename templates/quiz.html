@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% macro progress() -%} {{(index / total * 100) | round | int}} {%- endmacro %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'quiz.css') }}">
+
+<script>
+  let question = {{question|tojson}}
+</script>
+
+<div class="container">
+  <h4>Q{{ index }}: {{ question.question }}</h4>
+
+  {% if question.type == "arrange" %}
+  <div class="arrange">
+  </div>
+  {% elif question.type == "mcq" %}
+    <div class="mcq">
+      {% for option in question.options %}
+      <div class="choice">
+        <div class="bubble"></div>
+        <p>
+        {{option}}</p>
+      </div>
+      {% endfor %}
+  {% endif %}
+
+  {% if total != index %}
+  <div class="row my-2">
+    <div class="col-10"></div>
+    <div class="col-2 center">
+      <a href="/quiz/{{index + 1}}" class="btn btn-next">
+        <h3 class="mx-4 my-0">Next</h3>
+      </a>
+    </div>
+  </div>
+  {% else %}
+  <div class="row my-2">
+    <div class="col-10"></div>
+    <div class="col-2 center">
+      <a href="/results" class="btn btn-next">
+        <h3 class="mx-4 my-0">Finish</h3>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="progress">
+    <div
+      class="progress-bar progress-bar-striped bg-success"
+      role="progressbar"
+      style="width: {{progress()}}%"
+      aria-valuenow="{{progress()}}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      {{progress()}}%
+    </div>
+  </div>
+</div>
+
+{% endblock %}
