@@ -24,7 +24,6 @@ def home():
 @app.route('/learn/<page>')
 def teaching_blinds(page):
     user_log.append({page: datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")})
-    print(user_log)
     return render_template("learn.html", content=content[page], total=len(content))
 
 
