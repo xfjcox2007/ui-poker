@@ -47,7 +47,6 @@ def quiz_page(page):
 def update_quiz():
     selection = request.get_json()["selection"]
     page = request.get_json()["page"]
-    timeStamp = user_log[0]["quiz"][page]
     user_log[0]["quiz"][page] = {"startTime": user_log[0]["quiz"][page]["startTime"],
                                  "answer": selection,
                                  }
