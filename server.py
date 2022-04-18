@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import os
 import json
+import datetime
 
 app = Flask(__name__)
 current_dir = os.getcwd()
@@ -13,6 +14,7 @@ quiz_file = open(current_dir+'/data/quiz.json')
 questions = json.load(quiz_file)
 quiz_file.close()
 
+user_log = []
 
 @app.route('/', )
 def home():
@@ -21,6 +23,8 @@ def home():
 
 @app.route('/learn/<page>')
 def teaching_blinds(page):
+    user_log.append({page: datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")})
+    print(user_log)
     return render_template("learn.html", content=content[page], total=len(content))
 
 
