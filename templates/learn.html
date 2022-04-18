@@ -7,43 +7,50 @@
 {% block content %}
 
 <script>
-  let data = {{content|tojson}}
+    let data = {
+    {
+        content | tojson
+    }
+    }
 </script>
 
 <div class="container">
-  <div class="row justify-content-md-center my-4">
-	<div class="col-6 center base-background">
-	  <h1 class="my-0">Texas Hold'em</h1>
-	</div>
-  </div>
-  <div class="row justify-content-md-center my-4">
-	<div class="col-12 center">
-	  <h1>{{content.topic}}</h1>
-	</div>
-  </div>
+    <div class="row justify-content-md-center my-4">
+        <div class="col-6 center base-background">
+            <h1 class="my-0">Texas Hold'em</h1>
+        </div>
+    </div>
+    <div class="row justify-content-md-center my-4">
+        <div class="col-12 center">
+            <h1>{{content.topic}}</h1>
+        </div>
+    </div>
 
-  {% if content.page == 1 %}
-  {% include "learn-2col.html" %}
-  {% else %}
-  {% include "learn-default.html" %}
-  {% endif %}
+    {% if content.page == 1 %}
+    {% include "learn-2col.html" %}
+    {% else %}
+    {% include "learn-default.html" %}
+    {% endif %}
 
-  {% if content.hasNext %}
-  <div class="row my-2">
-	<div class="col-10"></div>
-	<div class="col-2 center">
-	  <a href="/learn/{{content.page + 1}}" class="btn btn-next">
-		<h3 class="mx-4 my-0">Next</h3>
-	  </a>
-	</div>
-  </div>
-  {% endif %}
+    {% if content.hasNext %}
+    <div class="row my-2">
+        <div class="col-10"></div>
+        <div class="col-2 center">
+            <!-- <a href="/learn/{{content.page + 1}}" class="btn btn-next">   uncomment this when all works-->
+            <a href="/quiz/1" class="btn btn-next">
 
-  <div class="progress">
-	<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{progress()}}%" aria-valuenow="{{progress()}}" aria-valuemin="0" aria-valuemax="100">
-	  {{progress()}}%
-	</div>
-  </div>
+                <h3 class="mx-4 my-0">Next</h3>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{progress()}}%"
+             aria-valuenow="{{progress()}}" aria-valuemin="0" aria-valuemax="100">
+            {{progress()}}%
+        </div>
+    </div>
 </div>
 
 {% endblock %}
