@@ -64,7 +64,7 @@
 					"highlight": []
 				}
 			],
-		"image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fatlanticcityweekly.com%2Fblogs%2Fgaming_guru%2Fhow-to-play-flop-poker%2Farticle_922c378f-85d4-5ad5-8373-386279369e53.html&psig=AOvVaw0fiwEF2yk2QboG4mca3f4l&ust=1650415862935000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD6mrH0nvcCFQAAAAAdAAAAABAE",
+		"image": "https://miro.medium.com/max/864/0*nop8RFE5fChxKvsY.jpg",
 		"hasNext": 1,
 		"process": 0.4
 	},
@@ -89,12 +89,117 @@
 		"content": 
 			[
 				{
-					"text": "A straight from a ten to an ace and all five cards of the same suit. In poker suit does not matter and pots are split between equally strong hands.",
+					"text": "The Royal Flush is the best poker hand you can have on a gaming table. A straight from a ten to an ace and all five cards of the same suit. In poker suit does not matter and pots are split between equally strong hands.",
+					"highlight": ["best poker hand"]
+				}
+			],
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Royal-Flush.jpg?imwidth=1240",
+		"hasNext": 1,
+		"process": 0.6	
+	},
+	"7": {
+		"page": 7,
+		"topic": "Rank of Hands",
+		"subtopic": "Straight Flush",
+		"content": 
+			[
+				{
+					"text": "The Straight Flush is the second strongest poker hand. Any five cards of sequential values in the same suit that’s not a royal flush is a straight flush. It can only be beaten by a royal flush or another straight flush including higher-ranking cards.",
+					"highlight": ["second"]
+				}
+			],
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Straight-Flush.jpg?imwidth=1240",
+		"hasNext": 1,
+		"process": 0.7	
+	},
+	"8": {
+		"page": 8,
+		"topic": "Rank of Hands",
+		"subtopic": "Four of a Kind",
+		"content": 
+			[
+				{
+					"text": "Weighting in next is Four of a Kind. The same card in all four suits. The five-card hand is completed by the highest card among the others on the table or in your hand.",
 					"highlight": []
 				}
 			],
-		"image": "/img/royal_flush.jpg",
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Four-of-a-kind.jpg?imwidth=1240",
 		"hasNext": 1,
-		"process": 0.6
+		"process": 0.8	
+	},
+	"9": {
+		"page": 9,
+		"topic": "Rank of Hands",
+		"subtopic": "Full house",
+		"content": 
+			[
+				{
+					"text": "A hand comprising the same value card in three different suits (three of a kind) and a separate pair of the same rank card in two different suits. When more than one player has a full house the winning hand is the one with the higher or highest value three of a kind.",
+					"highlight": []
+				}
+			],
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Full-house.jpg?imwidth=1240",
+		"hasNext": 1,
+		"process": 0.9	
+	},
+	"10": {
+		"page": 10,
+		"topic": "Rank of Hands",
+		"subtopic": "Flush",
+		"content": 
+			[
+				{
+					"text": "The Flush stands fifth in poker hand hierarchy. Five cards of the same suit in any order whatsoever. When two players have flushes the flush featuring the highest valued card is the winning poker hand.",
+					"highlight": []
+				}
+			],
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Flush.jpg?imwidth=1240",
+		"hasNext": 1,
+		"process": 0.9	
+	},
+	"11": {
+		"page": 11,
+		"topic": "Rank of Hands",
+		"subtopic": "Three of a Kind",
+		"content": 
+			[
+				{
+					"text": "Three of a Kind is the sixth. A poker hand containing three cards of the same rank in three different suits. The two highest available cards besides the three of a kind complete the hand.",
+					"highlight": []
+				}
+			],
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/three-of-a-kind.jpg?imwidth=1240",
+		"hasNext": 1,
+		"process": 0.9	
+	},	
+	"12": {
+		"page": 12,
+		"topic": "Rank of Hands",
+		"subtopic": "Two Pair",
+		"content": 
+			[
+				{
+					"text": "Two different sets of two cards of matching rank. The highest-ranked remaining card completes the hand.",
+					"highlight": []
+				}
+			],
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/two-pair.jpg?imwidth=1240",
+		"hasNext": 1,
+		"process": 0.9	
+	},	
+	"13": {
+		"page": 13,
+		"topic": "Rank of Hands",
+		"subtopic": "One Pair",
+		"content": 
+			[
+				{
+					"text": "A pair of cards of the same rank in different suits. The remainder of the hand is formed from the three highest ranked cards available.",
+					"highlight": []
+				}
+			],
+		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/pair.jpg?imwidth=1240",
+		"hasNext": 0,
+		"process": 0.9	
 	}
 }
