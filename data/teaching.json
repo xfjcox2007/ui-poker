@@ -93,7 +93,8 @@
 					"highlight": []
 				}
 			],
-		"image": "/img/royal_flush.jepg",
+		"image": "/img/royal_flush.jpg",
 		"hasNext": 1,
-		"process": 0.6	
+		"process": 0.6
+	}
 }

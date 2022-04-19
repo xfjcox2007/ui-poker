@@ -31,16 +31,24 @@ def home():
 
 
 @app.route('/learn/<page>')
-def teaching_blinds(page):
-    # user_log[0]["learningProgress"] = {page: datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")}
-    # user_log[0]["learningProgress"].append({page: datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")})
-    return render_template("learn.html", content=content[page], total=len(content))
+def learn_page(page):
+    user_log[0]["learningProgress"][page] = {
+        "startTime": datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
+    }
+    return render_template("learn.html",
+                           content=content[page],
+                           total=len(content))
 
 
 @app.route('/quiz/<page>')
 def quiz_page(page):
-    # user_log[0]["quiz"][page] = {"startTime": datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")}
-    return render_template("quiz.html", question=questions[page], total=len(questions), index=int(page),
+    user_log[0]["quiz"][page] = {
+        "startTime": datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
+    }
+    return render_template("quiz.html",
+                           question=questions[page],
+                           total=len(questions),
+                           index=int(page),
                            logs=user_log[0]["quiz"])
 
 
@@ -48,9 +56,10 @@ def quiz_page(page):
 def update_quiz():
     selection = request.get_json()["selection"]
     page = request.get_json()["page"]
-    user_log[0]["quiz"][page] = {"startTime": user_log[0]["quiz"][page]["startTime"],
-                                 "answer": selection,
-                                 }
+    user_log[0]["quiz"][page] = {
+        "startTime": user_log[0]["quiz"][page]["startTime"],
+        "answer": selection,
+    }
     return jsonify(user_log)
 
 

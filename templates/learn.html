@@ -6,6 +6,7 @@
 
 {% block content %}
 
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
 <script>
     let data = {{content | tojson}}
 </script>
@@ -32,10 +33,15 @@
     <div class="row my-2">
         <div class="col-10"></div>
         <div class="col-2 center">
-            <!-- <a href="/learn/{{content.page + 1}}" class="btn btn-next">   uncomment this when all works-->
-            <a href="/quiz/1" class="btn btn-next">
-                <h3 class="mx-4 my-0">Next</h3>
-            </a>
+          <a
+			{% if content.page == total %}
+			href="/quiz/1"
+			{% else %}
+			href="/learn/{{content.page + 1}}"
+			{% endif %}
+			class="btn btn-next">
+            <h3 class="mx-4 my-0">Next</h3>
+          </a>
         </div>
     </div>
     {% endif %}
