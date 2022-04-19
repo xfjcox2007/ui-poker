@@ -25,5 +25,75 @@
 		"audio": "",
 		"hasNext": 1,
 		"process": 0.1
-	}
+	},
+	"2": {
+		"page": 2,
+		"topic": "Flop, Turns & River",
+		"content": 
+			[
+				{
+					"text": "FLOPS - Dealer reveals the first 3 community cards face up and players try to formulate plans to bet or raise or check",
+					"highlight": []
+				}
+			],
+		"image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fatlanticcityweekly.com%2Fblogs%2Fgaming_guru%2Fhow-to-play-flop-poker%2Farticle_922c378f-85d4-5ad5-8373-386279369e53.html&psig=AOvVaw0fiwEF2yk2QboG4mca3f4l&ust=1650415862935000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD6mrH0nvcCFQAAAAAdAAAAABAE",
+		"hasNext": 1,
+		"process": 0.2
+	},
+	"3": {
+		"page": 3,
+		"topic": "Flop, Turns & River",
+		"content": 
+			[
+				{
+					"text": "TURNS- A 4th community card is dealt, facing up and players decide based on the 5 cards they have to bet or raise or check",
+					"highlight": []
+				}
+			],
+		"image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fatlanticcityweekly.com%2Fblogs%2Fgaming_guru%2Fhow-to-play-flop-poker%2Farticle_922c378f-85d4-5ad5-8373-386279369e53.html&psig=AOvVaw0fiwEF2yk2QboG4mca3f4l&ust=1650415862935000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD6mrH0nvcCFQAAAAAdAAAAABAE",
+		"hasNext": 1,
+		"process": 0.3
+	},
+	"4": {
+		"page": 4,
+		"topic": "Flop, Turns & River",
+		"content": 
+			[
+				{
+					"text": "River- Fifty Community cards are dealt, facing up and players decide based on the 6 cards they have form a poker hand or to bet or raise or check",
+					"highlight": []
+				}
+			],
+		"image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fatlanticcityweekly.com%2Fblogs%2Fgaming_guru%2Fhow-to-play-flop-poker%2Farticle_922c378f-85d4-5ad5-8373-386279369e53.html&psig=AOvVaw0fiwEF2yk2QboG4mca3f4l&ust=1650415862935000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD6mrH0nvcCFQAAAAAdAAAAABAE",
+		"hasNext": 1,
+		"process": 0.4
+	},
+	"5": {
+		"page": 5,
+		"topic": "Showdown",
+		"content": 
+			[
+				{
+					"text": "All betting comes to an end. Every shows their cards and a winner is decided based on high sequence",
+					"highlight": ["end", "cards", "high sequence"]
+				}
+			],
+		"image": "",
+		"hasNext": 1,
+		"process": 0.5		
+	},
+	"6": {
+		"page": 6,
+		"topic": "Rank of Hands",
+		"subtopic": "Royal Flush",
+		"content": 
+			[
+				{
+					"text": "A straight from a ten to an ace and all five cards of the same suit. In poker suit does not matter and pots are split between equally strong hands.",
+					"highlight": []
+				}
+			],
+		"image": "/img/royal_flush.jepg",
+		"hasNext": 1,
+		"process": 0.6	
 }
