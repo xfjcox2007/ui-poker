@@ -1,11 +1,22 @@
 .center {
-	text-align: center;
+    text-align: center;
 }
 
 .base-background {
-	background: #00fdc8;
+    background: #00fdc8;
 }
 
 .btn-next {
-	border-color: #f1c232;
+    border-color: #f1c232;
+}
+
+.attempted {
+    background-color: #00fdc8;
+}
+.wrong {
+	background-color: #f54f4f;
+}
+
+.dropdown-menu {
+    background-color: transparent;
 }

@@ -6,9 +6,10 @@ function updateQuizLogs(selectedOption) {
         url: "/updateQuiz",
         dataType: "json",
         contentType: "application/json; charset=utf-8",
-        data: JSON.stringify({selection: selectedOption , page: question}),
+        data: JSON.stringify({selection: selectedOption, page: question}),
         success: function (result) {
             console.log("success::", result)
+            populateDropDowns()
         },
         error: function (request, status, error) {
             console.log("Error");

@@ -19,22 +19,29 @@ user_details = open(current_dir + '/data/user.json')
 user = json.load(user_details)
 user_details.close()
 
-# user_details.id = uuid.uuid1()
+user_log = user
 
-user_log = [user]
+
+def prepareLogs():
+    for index, question in enumerate(content):
+        user_log["learningProgress"][str(question)] = {"startTime": "", "status": "unattempted",
+                                                       "topic": content[question]["topic"]}
+    for index, question in enumerate(questions):
+        user_log["quiz"][str(question)] = {"startTime": "", "QuestionNumber": question, "status": "unattempted",
+                                           "answer": ""}
 
 
 @app.route('/', )
 def home():
-    user_log[0]["id"] = uuid.uuid4().int
+    user_log["id"] = uuid.uuid4().int
+    prepareLogs()
     return render_template('Home.html')
 
 
 @app.route('/learn/<page>')
 def learn_page(page):
-    user_log[0]["learningProgress"][page] = {
-        "startTime": datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
-    }
+    user_log["learningProgress"][str(page)]["startTime"] = datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
+    user_log["learningProgress"]["status"] = "completed"
     return render_template("learn.html",
                            content=content[page],
                            total=len(content))
@@ -42,32 +49,33 @@ def learn_page(page):
 
 @app.route('/quiz/<page>')
 def quiz_page(page):
-    user_log[0]["quiz"][page] = {
-        "startTime": datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
-    }
+    print(user_log)
+    user_log["quiz"][str(page)]["startTime"] = datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
     return render_template("quiz.html",
                            question=questions[page],
                            total=len(questions),
                            index=int(page),
-                           logs=user_log[0]["quiz"])
+                           logs=user_log["quiz"])
 
 
 @app.route('/updateQuiz', methods=['post'])
 def update_quiz():
-    selection = request.get_json()["selection"]
     page = request.get_json()["page"]
-    user_log[0]["quiz"][page] = {
-        "startTime": user_log[0]["quiz"][page]["startTime"],
-        "answer": selection,
-    }
+    user_log["quiz"][page]["status"] = "attempted"
+    user_log["quiz"][page]["answer"] = request.get_json()["selection"]
+    return jsonify(user_log)
+
+
+@app.route('/fetchData', methods=['get'])
+def get_logs():
     return jsonify(user_log)
 
 
 @app.route('/results')
 def results():
-    print(user_log)
     return render_template("results.html")
 
 
 if __name__ == '__main__':
+    prepareLogs()
     app.run(debug=True)

@@ -14,8 +14,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
+    <!--- Boostrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
 
     <title>UI Design - Poker </title>
 </head>
@@ -24,17 +33,36 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Learn Poker</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		<div class="navbar-nav">
-          <a class="nav-link" href="/learn/1">Rule</a>
-          <a class="nav-link" href="/quiz/1">Quiz</a>
-		</div>
-      </div>
-	</div>
+        <a class="navbar-brand" href="/">Learn Poker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Learn Poker
+                    </a>
+                    <div id="navbarDropdownMenuLinkContainer" class="dropdown-menu"
+                         aria-labelledby="navbarDropdownMenuLink">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkQuiz" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Take Quiz
+                    </a>
+                    <div id="navbarDropdownMenuLinkQuizContainer" class="dropdown-menu"
+                         aria-labelledby="navbarDropdownMenuLinkQuiz">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 </nav>
 
 <div class="container-fluid template-container">
