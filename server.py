@@ -24,10 +24,10 @@ user_log = user
 
 def prepareLogs():
     for index, question in enumerate(content):
-        user_log["learningProgress"][str(question)] = {"startTime": "", "status": "unattempted",
+        user_log["learningProgress"][str(question)] = {"startTime": "", "status": "NotStarted",
                                                        "topic": content[question]["topic"]}
     for index, question in enumerate(questions):
-        user_log["quiz"][str(question)] = {"startTime": "", "QuestionNumber": question, "status": "unattempted",
+        user_log["quiz"][str(question)] = {"startTime": "", "QuestionNumber": question, "status": "NotStarted",
                                            "answer": ""}
 
 
@@ -41,7 +41,7 @@ def home():
 @app.route('/learn/<page>')
 def learn_page(page):
     user_log["learningProgress"][str(page)]["startTime"] = datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
-    user_log["learningProgress"]["status"] = "completed"
+    user_log["learningProgress"][str(page)]["status"] = "completed"
     return render_template("learn.html",
                            content=content[page],
                            total=len(content))
@@ -51,6 +51,7 @@ def learn_page(page):
 def quiz_page(page):
     print(user_log)
     user_log["quiz"][str(page)]["startTime"] = datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
+    user_log["quiz"][str(page)]["status"] = "unattempted"
     return render_template("quiz.html",
                            question=questions[page],
                            total=len(questions),

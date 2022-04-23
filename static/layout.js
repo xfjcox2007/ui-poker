@@ -14,6 +14,7 @@ function populateDropDowns() {
             })
 
             let learning = data["learningProgress"]
+            console.log(learning)
             Object.keys(learning).forEach(key => {
                 $('#navbarDropdownMenuLinkContainer').append(`<a class="dropdown-item" href="/learn/${key}">${learning[key]["topic"]}</a>`)
             })
