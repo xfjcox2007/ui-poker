@@ -45,6 +45,22 @@
           </a>
         </div>
     </div>
+    {% else %}
+        <div class="row my-2">
+        <div class="col-8"></div>
+        <div id="returntoQuiz" class="col-2 center"></div>
+        <div class="col-2 center">
+          <a
+            {% if content.page == total %}
+            href="/quiz/1"
+            {% else %}
+            href="/learn/{{content.page + 1}}"
+            {% endif %}
+            class="btn btn-next">
+            <h3 class="mx-4 my-0">Quiz</h3>
+          </a>
+        </div>
+    </div>
     {% endif %}
 
     <div class="progress">
