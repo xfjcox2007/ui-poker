@@ -36,7 +36,7 @@
 					"highlight": []
 				}
 			],
-		"image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fatlanticcityweekly.com%2Fblogs%2Fgaming_guru%2Fhow-to-play-flop-poker%2Farticle_922c378f-85d4-5ad5-8373-386279369e53.html&psig=AOvVaw0fiwEF2yk2QboG4mca3f4l&ust=1650415862935000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD6mrH0nvcCFQAAAAAdAAAAABAE",
+		"image": "https://miro.medium.com/max/864/0*nop8RFE5fChxKvsY.jpg",
 		"hasNext": 1,
 		"process": 0.2
 	},
@@ -46,11 +46,11 @@
 		"content": 
 			[
 				{
-					"text": "TURNS- A 4th community card is dealt, facing up and players decide based on the 5 cards they have to bet or raise or check",
+					"text": "TURNS - A 4th community card is dealt, facing up and players decide based on the 5 cards they have to bet or raise or check",
 					"highlight": []
 				}
 			],
-		"image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fatlanticcityweekly.com%2Fblogs%2Fgaming_guru%2Fhow-to-play-flop-poker%2Farticle_922c378f-85d4-5ad5-8373-386279369e53.html&psig=AOvVaw0fiwEF2yk2QboG4mca3f4l&ust=1650415862935000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD6mrH0nvcCFQAAAAAdAAAAABAE",
+		"image": "https://miro.medium.com/max/864/0*nop8RFE5fChxKvsY.jpg",
 		"hasNext": 1,
 		"process": 0.3
 	},
@@ -60,7 +60,7 @@
 		"content": 
 			[
 				{
-					"text": "River- Fifty Community cards are dealt, facing up and players decide based on the 6 cards they have form a poker hand or to bet or raise or check",
+					"text": "RIVER - Fifty Community cards are dealt, facing up and players decide based on the 6 cards they have form a poker hand or to bet or raise or check",
 					"highlight": []
 				}
 			],
@@ -78,7 +78,7 @@
 					"highlight": ["end", "cards", "high sequence"]
 				}
 			],
-		"image": "",
+		"image": "https://www.888poker.com/magazine/sites/magazine.888poker.com/files/inline-images/Poker_Showdown_Image_1-01.jpg",
 		"hasNext": 1,
 		"process": 0.5		
 	},
@@ -89,7 +89,7 @@
 		"content": 
 			[
 				{
-					"text": "The Royal Flush is the best poker hand you can have on a gaming table. A straight from a ten to an ace and all five cards of the same suit. In poker suit does not matter and pots are split between equally strong hands.",
+					"text": "ROYAL FLUSH - The Royal Flush is the best poker hand you can have on a gaming table. A straight from a ten to an ace and all five cards of the same suit. In poker suit does not matter and pots are split between equally strong hands.",
 					"highlight": ["best poker hand"]
 				}
 			],
@@ -104,7 +104,7 @@
 		"content": 
 			[
 				{
-					"text": "The Straight Flush is the second strongest poker hand. Any five cards of sequential values in the same suit that’s not a royal flush is a straight flush. It can only be beaten by a royal flush or another straight flush including higher-ranking cards.",
+					"text": "STRAIGHT FLUSH - The Straight Flush is the second strongest poker hand. Any five cards of sequential values in the same suit that’s not a royal flush is a straight flush. It can only be beaten by a royal flush or another straight flush including higher-ranking cards.",
 					"highlight": ["second"]
 				}
 			],
@@ -119,7 +119,7 @@
 		"content": 
 			[
 				{
-					"text": "Weighting in next is Four of a Kind. The same card in all four suits. The five-card hand is completed by the highest card among the others on the table or in your hand.",
+					"text": "FOUR OF A KIND - Weighting in next is Four of a Kind. The same card in all four suits. The five-card hand is completed by the highest card among the others on the table or in your hand.",
 					"highlight": []
 				}
 			],
@@ -134,7 +134,7 @@
 		"content": 
 			[
 				{
-					"text": "A hand comprising the same value card in three different suits (three of a kind) and a separate pair of the same rank card in two different suits. When more than one player has a full house the winning hand is the one with the higher or highest value three of a kind.",
+					"text": "FULL HOUSE - A hand comprising the same value card in three different suits (three of a kind) and a separate pair of the same rank card in two different suits. When more than one player has a full house the winning hand is the one with the higher or highest value three of a kind.",
 					"highlight": []
 				}
 			],
@@ -149,7 +149,7 @@
 		"content": 
 			[
 				{
-					"text": "The Flush stands fifth in poker hand hierarchy. Five cards of the same suit in any order whatsoever. When two players have flushes the flush featuring the highest valued card is the winning poker hand.",
+					"text": "FLUSH - The Flush stands fifth in poker hand hierarchy. Five cards of the same suit in any order whatsoever. When two players have flushes the flush featuring the highest valued card is the winning poker hand.",
 					"highlight": []
 				}
 			],
@@ -164,7 +164,7 @@
 		"content": 
 			[
 				{
-					"text": "Three of a Kind is the sixth. A poker hand containing three cards of the same rank in three different suits. The two highest available cards besides the three of a kind complete the hand.",
+					"text": "THREE OF A KIND - Three of a Kind is the sixth. A poker hand containing three cards of the same rank in three different suits. The two highest available cards besides the three of a kind complete the hand.",
 					"highlight": []
 				}
 			],
@@ -179,7 +179,7 @@
 		"content": 
 			[
 				{
-					"text": "Two different sets of two cards of matching rank. The highest-ranked remaining card completes the hand.",
+					"text": "TWO PAIR - Two different sets of two cards of matching rank. The highest-ranked remaining card completes the hand.",
 					"highlight": []
 				}
 			],
@@ -194,7 +194,7 @@
 		"content": 
 			[
 				{
-					"text": "A pair of cards of the same rank in different suits. The remainder of the hand is formed from the three highest ranked cards available.",
+					"text": "ONE PAIR - A pair of cards of the same rank in different suits. The remainder of the hand is formed from the three highest ranked cards available.",
 					"highlight": []
 				}
 			],
