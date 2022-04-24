@@ -1,22 +1,22 @@
 {
-  "1":
-  {
+  "1": {
     "question": "Arrange the community cards in their correct sequence",
     "type": "arrange",
     "answer": "1. Flop , 2. The Turn , 3. The River",
     "explanation": "The Flop , the turn and the river is the correct sequence\n",
+    "learningPage": "2",
     "options": [
       "Flop",
       "The Turn",
       "The River"
     ]
   },
-  "2":
-  {
+  "2": {
     "question": "Who starts first Normally in a poker game.\n",
     "type": "mcq",
     "answer": "The one one the immediate left of the dealer\n",
     "explanation": "The person to the left of the dealer acts first and action proceeds in a clockwise fashion.\n",
+    "learningPage": "1",
     "options": [
       "The one from whom we started distributing the card\n",
       "The one one the immediate left of the dealer\n",
@@ -24,11 +24,11 @@
       "The one with the Small blind\n"
     ]
   },
-  "3":
-  {
+  "3": {
     "question": "The pot is $150 and your opponent bets $75. How much equity do you need to make a breakeven call?",
     "type": "mcq",
     "answer": "25%",
+    "learningPage": "1",
     "explanation": "The calculation is: [75 / (75+75+150)] * 100 = 25%\n",
     "options": [
       "20%",
