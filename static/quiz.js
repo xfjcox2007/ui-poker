@@ -41,12 +41,5 @@ $(document).ready(function () {
         }
 
         updateQuizLogs(selectedOption);
-    } else if (question.type === 'arrange') {
-        let options = question.options;
-        let order = [...Array(options.length).keys()]
-
-        for (let option of options) {
-            $('.arrange').append(`<div class="arrange-option">${option}</div>`)
-        }
     }
 });

@@ -1,14 +1,15 @@
 {
   "1": {
     "question": "Arrange the community cards in their correct sequence",
-    "type": "arrange",
-    "answer": "1. Flop , 2. The Turn , 3. The River",
-    "explanation": "The Flop , the turn and the river is the correct sequence\n",
+    "type": "mcq",
+    "answer": "0",
+    "explanation": "The Flop, the turn and the river is the correct sequence\n",
     "learningPage": "2",
     "options": [
-      "Flop",
-      "The Turn",
-      "The River"
+      "Flop, Turn, River",
+      "Turn, Flop, River",
+      "Turn, River, Flop",
+      "River, Turn, Flop"
     ]
   },
   "2": {
