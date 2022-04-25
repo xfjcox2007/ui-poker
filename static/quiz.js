@@ -39,6 +39,8 @@ $(document).ready(function () {
                 $(`.mcq .choice`).removeAttr('selected');
             }
         }
+
+        updateQuizLogs(selectedOption);
     } else if (question.type === 'arrange') {
         let options = question.options;
         let order = [...Array(options.length).keys()]

@@ -74,7 +74,13 @@ def get_logs():
 
 @app.route('/results')
 def results():
-    return render_template("results.html")
+    correct = 0
+    answers = user_log['quiz']
+    for i in range(1,len(answers)+1):
+      if str(answers[str(i)]['answer']) == str(questions[str(i)]['answer']):
+        correct += 1
+    score = correct / len(answers)
+    return render_template("results.html", score=int(round(score, 2) * 100))
 
 
 if __name__ == '__main__':
