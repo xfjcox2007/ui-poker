@@ -7,15 +7,15 @@ import uuid
 app = Flask(__name__)
 current_dir = os.getcwd()
 
-teaching_file = open(current_dir + '/data/teaching.json')
+teaching_file = open(current_dir + '/Data/teaching.json')
 content = json.load(teaching_file)
 teaching_file.close()
 
-quiz_file = open(current_dir + '/data/quiz.json')
+quiz_file = open(current_dir + '/Data/quiz.json')
 questions = json.load(quiz_file)
 quiz_file.close()
 
-user_details = open(current_dir + '/data/user.json')
+user_details = open(current_dir + '/Data/user.json')
 user = json.load(user_details)
 user_details.close()
 

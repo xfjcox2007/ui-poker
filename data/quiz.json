@@ -1,6 +1,7 @@
 {
   "1": {
     "question": "Arrange the community cards in their correct sequence",
+    "page": "1",
     "type": "mcq",
     "answer": "0",
     "explanation": "The Flop, the turn and the river is the correct sequence\n",
@@ -14,6 +15,7 @@
   },
   "2": {
     "question": "Who starts first Normally in a poker game.\n",
+    "page": "2",
     "type": "mcq",
     "answer": "1",
     "explanation": "The person to the left of the dealer acts first and action proceeds in a clockwise fashion.\n",
@@ -26,7 +28,8 @@
     ]
   },
   "3": {
-    "question": "The pot is $150 and your opponent bets $75. How much equity do you need to make a breakeven call?",
+    "question": "The pot is $150 and your opponent bets $75. How much equity do you need to make a break even call?",
+    "page": "3",
     "type": "mcq",
     "answer": "1",
     "learningPage": "1",
@@ -36,6 +39,72 @@
       "25%",
       "33%",
       "50%"
+    ]
+  },
+  "4": {
+    "question": "How many individual cards does the dealer deal to each person in Texas Hold'em Poker?",
+    "page": "4",
+    "type": "mcq",
+    "answer": "1",
+    "learningPage": "1",
+    "explanation": "Read the learning slides\n",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "78"
+    ]
+  },
+  "5": {
+    "question": "Which is the better hand 2 pairs or a flush?",
+    "page": "5",
+    "type": "mcq",
+    "answer": "1",
+    "learningPage": "6",
+    "explanation": "Read the learning slides\n",
+    "options": [
+      "2 Pair",
+      "Flush"
+    ]
+  },
+  "6": {
+    "question": "What is a community card?",
+    "page": "6",
+    "type": "mcq",
+    "answer": "0",
+    "learningPage": "1",
+    "explanation": "The Flop, the turn and the river are the community\n",
+    "options": [
+      "A card everyone playing can use",
+      "A card only the dealer can use",
+      "Such type doesnt exist"
+    ]
+  },
+  "7": {
+    "question": "What is a big blind?",
+    "page": "7",
+    "type": "mcq",
+    "answer": "2",
+    "learningPage": "1",
+    "explanation": "Read the slides",
+    "options": [
+      "A king card",
+      "A queen card",
+      "A type of ante"
+    ]
+  },
+  "8": {
+    "question": "If you have a flush draw, four cards of the same suit, either on the flop or the turn and the board is not paired, how many outs do you have?",
+    "page": "8",
+    "type": "mcq",
+    "answer": "0",
+    "learningPage": "6",
+    "explanation": "flush{13(number of cards in a suit)-4(the four exposed from that suit)=9}",
+    "options": [
+      "Nine",
+      "Twelve",
+      "Six",
+      "Ten"
     ]
   }
 }
