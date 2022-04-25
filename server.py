@@ -49,7 +49,6 @@ def learn_page(page):
 
 @app.route('/quiz/<page>')
 def quiz_page(page):
-    print(user_log)
     user_log["quiz"][str(page)]["startTime"] = datetime.datetime.now().strftime("%d.%b %Y %H:%M:%S")
     user_log["quiz"][str(page)]["status"] = "unattempted"
     return render_template("quiz.html",

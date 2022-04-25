@@ -1,5 +1,5 @@
 function updateQuizLogs(selectedOption) {
-    console.log("here")
+    console.log("updateQuizLogs")
     let question = window.location.href.split("/").pop()
     $.ajax({
         type: "POST",
@@ -20,18 +20,27 @@ function updateQuizLogs(selectedOption) {
     });
 }
 
+function submitOption() {
+    console.log("submitOption")
+    updateQuizLogs(selectedOptionQuiz)
+    let next = parseInt(quizIndex) + 1
+    window.location.href = "/quiz/" + next
+
+}
+
+let selectedOptionQuiz
 
 $(document).ready(function () {
+    selectedOptionQuiz = 0;
     if (question.type === 'mcq') {
-        let selectedOption = 0;
         $('.mcq .choice:nth-child(1)').attr('selected', 'true');
 
         $('.choice').click(function (e) {
-            selectedOption = $(this).index();
+            selectedOptionQuiz = $(this).index();
             deselectAll();
-            console.log(selectedOption);
-            updateQuizLogs(selectedOption)
-            $(`.mcq .choice:nth-child(${selectedOption + 1})`).attr('selected', 'true');
+            console.log(selectedOptionQuiz);
+
+            $(`.mcq .choice:nth-child(${selectedOptionQuiz + 1})`).attr('selected', 'true');
         });
 
         function deselectAll() {
@@ -40,6 +49,6 @@ $(document).ready(function () {
             }
         }
 
-        updateQuizLogs(selectedOption);
+        //updateQuizLogs(selectedOption);
     }
 });

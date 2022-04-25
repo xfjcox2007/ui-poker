@@ -5,6 +5,7 @@
 <script>
   let question = {{question | tojson}}
   let logs = {{logs | tojson }}
+  let quizIndex = {{index}}
 </script>
 
 <div class="container">
@@ -28,9 +29,9 @@
       </div>
       <div class="col-md-8"></div>
       <div class="col-md-2">
-        <a href="/quiz/{{index + 1}}" class="btn btn-next">
+        <button class="btn btn-next" onclick="submitOption()">
           <h3 class="mx-4 my-0">Next</h3>
-        </a>
+        </button>
       </div>
     </div>
     {% else %}

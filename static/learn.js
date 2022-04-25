@@ -6,17 +6,17 @@ function toHtml(p) {
     return text
 }
 
-function renderReturnTOQuiz() {
+function renderReturnToQuiz() {
     $('#returntoQuiz').empty()
     fetch("/fetchData")
         .then(function (response) {
             return response.json()
         })
         .then(function (data) {
+            console.log("here")
             let quiz = data["quiz"]
-
             let quizKeys = Object.keys(quiz)
-
+            console.log(quiz)
             for (let i = 0; i < quizKeys.length; i++) {
                 key = quizKeys[i]
                 if (quiz[key]["status"] === "unattempted") {
@@ -34,5 +34,5 @@ function renderReturnTOQuiz() {
 }
 
 $(document).ready(function () {
-    renderReturnTOQuiz()
+    renderReturnToQuiz()
 });
