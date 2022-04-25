@@ -22,6 +22,7 @@
 				}
 			],
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Texas_Hold%27em_Poker_Table_with_Blinds.svg/1200px-Texas_Hold%27em_Poker_Table_with_Blinds.svg.png",
+		"imageAlt": "An image of poker board",
 		"audio": "",
 		"hasNext": 1,
 		"process": 0.1
@@ -37,6 +38,7 @@
 				}
 			],
 		"image": "https://miro.medium.com/max/864/0*nop8RFE5fChxKvsY.jpg",
+		"imageAlt": "An image of 3 flop, the turn, and the river",
 		"hasNext": 1,
 		"process": 0.2
 	},
@@ -51,6 +53,7 @@
 				}
 			],
 		"image": "https://miro.medium.com/max/864/0*nop8RFE5fChxKvsY.jpg",
+		"imageAlt": "An image of 3 flop, the turn, and the river",
 		"hasNext": 1,
 		"process": 0.3
 	},
@@ -65,6 +68,7 @@
 				}
 			],
 		"image": "https://miro.medium.com/max/864/0*nop8RFE5fChxKvsY.jpg",
+		"imageAlt": "An image of 3 flop, the turn, and the river",
 		"hasNext": 1,
 		"process": 0.4
 	},
@@ -79,6 +83,7 @@
 				}
 			],
 		"image": "https://www.888poker.com/magazine/sites/magazine.888poker.com/files/inline-images/Poker_Showdown_Image_1-01.jpg",
+		"imageAlt": "An image of several cards",
 		"hasNext": 1,
 		"process": 0.5		
 	},
@@ -94,6 +99,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Royal-Flush.jpg?imwidth=1240",
+		"imageAlt": "An image of a royal flush",
 		"hasNext": 1,
 		"process": 0.6	
 	},
@@ -109,6 +115,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Straight-Flush.jpg?imwidth=1240",
+		"imageAlt": "An image of a straight flush",
 		"hasNext": 1,
 		"process": 0.7	
 	},
@@ -124,6 +131,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Four-of-a-kind.jpg?imwidth=1240",
+		"imageAlt": "An image of a four-of-a-kind",
 		"hasNext": 1,
 		"process": 0.8	
 	},
@@ -139,6 +147,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Full-house.jpg?imwidth=1240",
+		"imageAlt": "An image of a full house",
 		"hasNext": 1,
 		"process": 0.9	
 	},
@@ -154,6 +163,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/Flush.jpg?imwidth=1240",
+		"imageAlt": "An image of a flush",
 		"hasNext": 1,
 		"process": 0.9	
 	},
@@ -169,6 +179,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/three-of-a-kind.jpg?imwidth=1240",
+		"imageAlt": "An image of a three-of-a-kind",
 		"hasNext": 1,
 		"process": 0.9	
 	},	
@@ -184,6 +195,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/two-pair.jpg?imwidth=1240",
+		"imageAlt": "An image of a two-pair",
 		"hasNext": 1,
 		"process": 0.9	
 	},	
@@ -199,6 +211,7 @@
 				}
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/pair.jpg?imwidth=1240",
+		"imageAlt": "An image of a one-pair",
 		"hasNext": 0,
 		"process": 0.9	
 	}

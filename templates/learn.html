@@ -23,31 +23,27 @@
         </div>
     </div>
 
-    {% if content.page == 1 %}
-    {% include "learn-2col.html" %}
-    {% else %}
-    {% include "learn-default.html" %}
-    {% endif %}
+	<!-- <div class="learn-content d-flex align-items-center"> -->
+      {% if content.page == 1 %}
+      {% include "learn-2col.html" %}
+      {% else %}
+      {% include "learn-default.html" %}
+      {% endif %}
+	<!-- </div> -->
 
-    {% if content.hasNext %}
     <div class="row my-2">
-        <div class="col-8"></div>
-        <div id="returntoQuiz" class="col-2 center"></div>
         <div class="col-2 center">
+          {% if content.page > 1 %}
           <a
-			{% if content.page == total %}
-			href="/quiz/1"
-			{% else %}
-			href="/learn/{{content.page + 1}}"
-			{% endif %}
-			class="btn btn-next">
-            <h3 class="mx-4 my-0">Next</h3>
+            href="/learn/{{content.page - 1}}"
+            class="btn btn-next">
+            <h3 class="mx-4 my-0">
+			  Prev
+			</h3>
           </a>
+          {% endif %}
         </div>
-    </div>
-    {% else %}
-        <div class="row my-2">
-        <div class="col-8"></div>
+        <div class="col-6"></div>
         <div id="returntoQuiz" class="col-2 center"></div>
         <div class="col-2 center">
           <a
@@ -57,13 +53,18 @@
             href="/learn/{{content.page + 1}}"
             {% endif %}
             class="btn btn-next">
-            <h3 class="mx-4 my-0">Quiz</h3>
+            <h3 class="mx-4 my-0">
+			  {% if content.hasNext %}
+			  Next
+			  {% else %}
+			  Quiz
+			  {% endif %}
+			</h3>
           </a>
         </div>
     </div>
-    {% endif %}
 
-    <div class="progress">
+    <div class="progress my-1">
         <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{progress()}}%"
              aria-valuenow="{{progress()}}" aria-valuemin="0" aria-valuemax="100">
             {{progress()}}%
