@@ -1,20 +1,26 @@
-{% extends "layout.html" %}
-
+{% extends "layout.html" %} {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename = 'results.css') }}" />
 
-{% block content %}
 <div class="container">
-  <img src="https://c.tenor.com/qcxjtpUHMmIAAAAC/win-celebration.gif" alt="">
-  <h1 >Congrats! You got a {{ score }}% on the quiz!</h1>
-  <h3>Test Summary</h3>
-  {% for q in summary %}
-  <div class="summary-question">
-    <p>Question: {{ q.question }}</p>
-    <p>You Answered: {{ q.userAnswer }}</p>
-    <p>Correct Answer: {{ q.correctAnswer }}</p>
-    <p>Explanation: {{ q.explanation }}</p>
+  <div class="results-header">
+    <h1>You got a {{ score }}% on the quiz!</h1>
+    <img src="https://c.tenor.com/qcxjtpUHMmIAAAAC/win-celebration.gif" alt="" />
   </div>
-  {% endfor %}
+  <div class="summary">
+    <h3>Test Summary</h3>
+    {% for q in summary %}
+    <div class="summary-question">
+      <h6>Question: {{ q.question }}</h6>
+      {% if q.correct %}
+      <p class="correct">You Answered: {{ q.userAnswer }}</p>
+      {% else %}
+      <p class="incorrect">You Answered: {{ q.userAnswer }}</p>
+      {% endif %}
+      <p>Correct Answer: {{ q.correctAnswer }}</p>
+      <p>Explanation: {{ q.explanation }}</p>
+    </div>
+    {% endfor %}
+  </div>
   <a class="btn btn-next" href="/">Back to homepage</a>
 </div>
 {% endblock %}

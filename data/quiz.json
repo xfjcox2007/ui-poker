@@ -47,7 +47,7 @@
     "type": "mcq",
     "answer": "1",
     "learningPage": "1",
-    "explanation": "Read the learning slides\n",
+    "explanation": "The dealer deals 2 cards to each person.\n",
     "options": [
       "1",
       "2",
@@ -61,7 +61,7 @@
     "type": "mcq",
     "answer": "1",
     "learningPage": "6",
-    "explanation": "Read the learning slides\n",
+    "explanation": "Flush is always better than 2 pair.\n",
     "options": [
       "2 Pair",
       "Flush"
@@ -73,7 +73,7 @@
     "type": "mcq",
     "answer": "0",
     "learningPage": "1",
-    "explanation": "The Flop, the turn and the river are the community\n",
+    "explanation": "Community cards are the cards dealt face up in the center of the table and shared by all players.\n",
     "options": [
       "A card everyone playing can use",
       "A card only the dealer can use",
