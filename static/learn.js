@@ -13,14 +13,13 @@ function renderReturnToQuiz() {
             return response.json()
         })
         .then(function (data) {
-            console.log("here")
             let quiz = data["quiz"]
             let quizKeys = Object.keys(quiz)
             console.log(quiz)
             for (let i = 0; i < quizKeys.length; i++) {
                 key = quizKeys[i]
                 if (quiz[key]["status"] === "unattempted") {
-                    $('#returntoQuiz').append(`<a		
+                    $('#returntoQuiz').append(`<a
 							href="/quiz/${key}"
 							class="btn btn-next">
 							<h3 class="mx-4 my-0">Return</h3>

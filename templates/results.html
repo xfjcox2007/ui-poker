@@ -1,9 +1,20 @@
 {% extends "layout.html" %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename = 'results.css') }}" />
+
 {% block content %}
 <div class="container">
   <img src="https://c.tenor.com/qcxjtpUHMmIAAAAC/win-celebration.gif" alt="">
   <h1 >Congrats! You got a {{ score }}% on the quiz!</h1>
+  <h3>Test Summary</h3>
+  {% for q in summary %}
+  <div class="summary-question">
+    <p>Question: {{ q.question }}</p>
+    <p>You Answered: {{ q.userAnswer }}</p>
+    <p>Correct Answer: {{ q.correctAnswer }}</p>
+    <p>Explanation: {{ q.explanation }}</p>
+  </div>
+  {% endfor %}
   <a class="btn btn-next" href="/">Back to homepage</a>
 </div>
 {% endblock %}

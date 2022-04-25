@@ -75,11 +75,19 @@ def get_logs():
 def results():
     correct = 0
     answers = user_log['quiz']
+    summary = []
     for i in range(1,len(answers)+1):
+      q = {}
+      q['userAnswer'] = str(answers[str(i)]['answer'])
+      q['correctAnswer'] = str(questions[str(i)]['answer'])
+      q['question'] = questions[str(i)]['question']
+      q['explanation'] = questions[str(i)]['explanation']
+      q['learningPage'] = questions[str(i)]['learningPage']
+      summary.append(q)
       if str(answers[str(i)]['answer']) == str(questions[str(i)]['answer']):
         correct += 1
     score = correct / len(answers)
-    return render_template("results.html", score=int(round(score, 2) * 100))
+    return render_template("results.html", score=int(round(score, 2) * 100), summary=summary)
 
 
 if __name__ == '__main__':
