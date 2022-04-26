@@ -7,15 +7,15 @@ import uuid
 app = Flask(__name__)
 current_dir = os.getcwd()
 
-teaching_file = open(current_dir + '/Data/teaching.json')
+teaching_file = open(current_dir + '/data/teaching.json')
 content = json.load(teaching_file)
 teaching_file.close()
 
-quiz_file = open(current_dir + '/Data/quiz.json')
+quiz_file = open(current_dir + '/data/quiz.json')
 questions = json.load(quiz_file)
 quiz_file.close()
 
-user_details = open(current_dir + '/Data/user.json')
+user_details = open(current_dir + '/data/user.json')
 user = json.load(user_details)
 user_details.close()
 
@@ -78,14 +78,19 @@ def results():
     summary = []
     for i in range(1,len(answers)+1):
       q = {}
-      q['userAnswer'] = str(answers[str(i)]['answer'])
-      q['correctAnswer'] = str(questions[str(i)]['answer'])
+      print(str(answers[str(i)]['answer']))
+      print(questions[str(i)]['options'][int(str(questions[str(i)]['answer']))])
+      q['userAnswer'] = 'No Answer' if str(answers[str(i)]['answer']) == '' else questions[str(i)]['options'][int(str(answers[str(i)]['answer']))]
+      q['correctAnswer'] = questions[str(i)]['options'][int(str(questions[str(i)]['answer']))]
       q['question'] = questions[str(i)]['question']
       q['explanation'] = questions[str(i)]['explanation']
       q['learningPage'] = questions[str(i)]['learningPage']
+      q['correct'] = False
       summary.append(q)
       if str(answers[str(i)]['answer']) == str(questions[str(i)]['answer']):
         correct += 1
+        q['correct'] = True
+
     score = correct / len(answers)
     return render_template("results.html", score=int(round(score, 2) * 100), summary=summary)
 

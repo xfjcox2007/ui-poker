@@ -2,7 +2,38 @@
   margin: 0;
 }
 
-.summary-question {
-  background-color: red !important;
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.summary-question {
+  background-color: rgb(247, 247, 247);
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.4rem;
+  max-width: 600px;
+  width: 600px;
+}
+
+.results-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-question p.correct{
+  color: rgb(22, 125, 50);
+}
+
+.summary-question p.incorrect {
+  color: rgb(186, 22, 22);
+}
