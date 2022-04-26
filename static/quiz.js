@@ -49,6 +49,6 @@ $(document).ready(function () {
             }
         }
 
-        updateQuizLogs(selectedOptionQuiz);
+        //updateQuizLogs(selectedOptionQuiz);
     }
 });
