@@ -25,7 +25,7 @@ user_log = user
 def prepareLogs():
     for index, question in enumerate(content):
         user_log["learningProgress"][str(question)] = {"startTime": "", "status": "NotStarted",
-                                                       "topic": content[question]["topic"]}
+                                                       "subtopic": content[question]["subtopic"]}
     for index, question in enumerate(questions):
         user_log["quiz"][str(question)] = {"startTime": "", "QuestionNumber": question, "status": "NotStarted",
                                            "answer": ""}
@@ -76,20 +76,21 @@ def results():
     correct = 0
     answers = user_log['quiz']
     summary = []
-    for i in range(1,len(answers)+1):
-      q = {}
-      print(str(answers[str(i)]['answer']))
-      print(questions[str(i)]['options'][int(str(questions[str(i)]['answer']))])
-      q['userAnswer'] = 'No Answer' if str(answers[str(i)]['answer']) == '' else questions[str(i)]['options'][int(str(answers[str(i)]['answer']))]
-      q['correctAnswer'] = questions[str(i)]['options'][int(str(questions[str(i)]['answer']))]
-      q['question'] = questions[str(i)]['question']
-      q['explanation'] = questions[str(i)]['explanation']
-      q['learningPage'] = questions[str(i)]['learningPage']
-      q['correct'] = False
-      summary.append(q)
-      if str(answers[str(i)]['answer']) == str(questions[str(i)]['answer']):
-        correct += 1
-        q['correct'] = True
+    for i in range(1, len(answers) + 1):
+        q = {}
+        print(str(answers[str(i)]['answer']))
+        print(questions[str(i)]['options'][int(str(questions[str(i)]['answer']))])
+        q['userAnswer'] = 'No Answer' if str(answers[str(i)]['answer']) == '' else questions[str(i)]['options'][
+            int(str(answers[str(i)]['answer']))]
+        q['correctAnswer'] = questions[str(i)]['options'][int(str(questions[str(i)]['answer']))]
+        q['question'] = questions[str(i)]['question']
+        q['explanation'] = questions[str(i)]['explanation']
+        q['learningPage'] = questions[str(i)]['learningPage']
+        q['correct'] = False
+        summary.append(q)
+        if str(answers[str(i)]['answer']) == str(questions[str(i)]['answer']):
+            correct += 1
+            q['correct'] = True
 
     score = correct / len(answers)
     return render_template("results.html", score=int(round(score, 2) * 100), summary=summary)
