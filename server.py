@@ -24,8 +24,11 @@ user_log = user
 
 def prepareLogs():
     for index, question in enumerate(content):
+        subtopic = content[question]["topic"]
+        if "subtopic" in content[question]:
+            subtopic = content[question]["subtopic"]
         user_log["learningProgress"][str(question)] = {"startTime": "", "status": "NotStarted",
-                                                       "subtopic": content[question]["subtopic"]}
+                                                       "subtopic": subtopic}
     for index, question in enumerate(questions):
         user_log["quiz"][str(question)] = {"startTime": "", "QuestionNumber": question, "status": "NotStarted",
                                            "answer": ""}
