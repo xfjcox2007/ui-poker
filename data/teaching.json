@@ -215,7 +215,16 @@
 			],
 		"image": "https://www.telegraph.co.uk/content/dam/betting/Better-Collective/pair.jpg?imwidth=1240",
 		"imageAlt": "An image of a one-pair",
-		"hasNext": 0,
+		"hasNext": 1,
 		"process": 0.9	
+	},
+	"14": {
+		"page": 14,
+		"topic": "Example of Poker Game",
+		"content":
+			[],
+		"video": "https://www.youtube.com/watch?v=T9qaY78wysc&ab_channel=PokerGO",
+		"hasNext": 0,
+		"process": 0.9
 	}
 }

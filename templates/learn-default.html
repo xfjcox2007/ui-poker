@@ -4,6 +4,17 @@
   <div class="col-12" id="content"  style="min-height: 75px">
   </div>
   <div class="col-8 center" style="min-height: 450px">
-	<img src="{{content.image}}" class="img-fluid" alt="{{content.imageAlt}}" width="700px" height="438px">
+  {% if content.image %}
+    <img src="{{content.image}}" class="img-fluid" alt="{{content.imageAlt}}" width="700px" height="438px">
+  {% else %}
+    <div style="margin-top: -30px;">
+        <video controls width="99%">
+            <source src="/static/poker-example.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+    </div>
+
+  {% endif %}
   </div>
 </div>
