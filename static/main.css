@@ -6,13 +6,18 @@ body {
 #logo {
   font-family: 'Bebas Neue' !important;
   font-weight: bold;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
   font-size: 4rem;
   color: black;
 }
 
+
+#home-copy {
+  color:#252f41;
+}
+
 .navbar {
-  background-color: #4879c8 !important;
+  background-color: #252f41 !important;
 }
 
 body {
@@ -26,8 +31,7 @@ body {
 .base-background {
   background: #1ca44e;
   color: white;
-
-  padding: 0.1rem 0.35rem !important;
+  padding: 0rem 0rem !important;
 }
 
 .base-background h1 {
@@ -36,6 +40,11 @@ body {
   letter-spacing: 0.1rem;
   font-weight: bold;
   padding: 0.1rem 0.35rem !important;
+}
+
+img, video {
+  border: 1px solid #f1c232;
+  border-radius: 0.25rem;
 }
 .btn-next {
   border-color: #f1c232;
