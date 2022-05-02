@@ -25,19 +25,19 @@
 }
 
 .choice[selected] {
-  border: 1px solid rgb(119, 171, 244);
+  border: 1px solid #4879c8;
 }
 
 .bubble {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   background-color: #eee;
   border-radius: 1rem;
   margin-right: 1rem;
 }
 
 .choice[selected] .bubble {
-  background-color: rgb(119, 171, 244);
+  background-color: #4879c8;
 }
 
 .choice p {
