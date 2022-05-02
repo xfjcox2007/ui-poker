@@ -1,13 +1,38 @@
+body {
+  font-family: 'Radio Canada' !important;
+}
+
+#logo {
+  font-family: 'Bebas Neue' !important;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  font-size: 4rem;
+}
+
+body {
+  background-color: rgb(243, 246, 247);
+}
+
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .base-background {
-    background: #00fdc8;
+  background: #1ca44e;
+  color: white;
+
+  padding: 0.1rem 0.35rem !important;
 }
 
+.base-background h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 0.1rem 0.35rem !important;
+}
 .btn-next {
-    border-color: #f1c232;
+  border-color: #f1c232;
 }
 
 /* .learn-content { */
@@ -15,10 +40,8 @@
 /* } */
 
 .attempted {
-    background-color: #00fdc8;
+  background-color: #00fdc8;
 }
 .wrong {
-	background-color: #f54f4f;
+  background-color: #f54f4f;
 }
-
-
